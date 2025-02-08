@@ -4,18 +4,18 @@ import { GeistSans } from "geist/font/sans";
 import { type Metadata } from "next";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://miizu.de"),
+  metadataBase: new URL("https://carrd.miizu.de"),
   title: "Hey Miizu! | Carrd",
   description: "Hey Miizu, i was wondering, HOW CAN I CONTACT YOUU??",
   authors: [{ name: "Miizu" }],
   openGraph: {
     title: "Hey Miizu",
     description: "Hey Miizu, i was wondering, HOW CAN I CONTACT YOUU??",
-    url: "https://miizu.de",
+    url: "https://carrd.miizu.de",
     siteName: "Miizu",
     images: [
       {
-        url: "/carrd-miizu-site.png",
+        url: "https://carrd.miizu.de/carrd-miizu-site.png",
         width: 1194,
         height: 744,
         alt: "Hey Miizu | Carrd",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Hey Miizu",
     description: "Hey Miizu, i was wondering, HOW CAN I CONTACT YOUU??",
-    images: ["/carrd-miizu-site.png"],
+    images: ["https://carrd.miizu.de/carrd-miizu-site.png"],
     creator: "@Miizu",
   },
   icons: [{ rel: "icon", url: "/sentimental.ico" }],
