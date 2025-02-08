@@ -15,10 +15,10 @@ export const metadata: Metadata = {
     siteName: "Miizu",
     images: [
       {
-        url: "/miizu-pfp.png",
-        width: 800,
-        height: 800,
-        alt: "Miizu Profile Picture",
+        url: "/carrd-miizu-site.png",
+        width: 1194,
+        height: 744,
+        alt: "Hey Miizu | Carrd",
       },
     ],
     locale: "en_US",
@@ -28,8 +28,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Hey Miizu",
     description: "Hey Miizu, i was wondering, HOW CAN I CONTACT YOUU??",
-    images: ["/miizu-pfp.png"],
-    creator: "@heyMiizu",
+    images: ["/carrd-miizu-site.png"],
+    creator: "@Miizu",
   },
   icons: [{ rel: "icon", url: "/sentimental.ico" }],
 };
