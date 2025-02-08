@@ -45,11 +45,8 @@ export default {
   				'0%': { 
   					maxWidth: '400px',
   				},
-  				'70%': {
-  					maxWidth: '970px',
-  				},
-  				'90%': {
-  					maxWidth: '940px',
+  				'85%': {
+  					maxWidth: '980px',
   				},
   				'100%': { 
   					maxWidth: '952px',
