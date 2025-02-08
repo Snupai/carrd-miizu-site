@@ -12,7 +12,7 @@ export default function Page() {
       <AnimatedBackground />
 
       {/* Main Content Box */}
-      <div className="relative w-full max-w-[95vw] md:max-w-5xl lg:max-w-6xl">
+      <div className="relative w-full max-w-[95vw] md:max-w-5xl lg:max-w-6xl animate-fade-in-up">
         {/* Localized blur effect */}
         <div className="absolute inset-0 backdrop-blur-2xl rounded-2xl" />
 
@@ -36,7 +36,7 @@ export default function Page() {
 
             {/* Right Side - Social Links */}
             <div className="flex flex-col gap-2 sm:gap-3 md:gap-4">
-              <Link href="https://www.youtube.com/@Miizumelon" target="_blank" className="w-full">
+              <Link href="https://www.youtube.com/@Miizumelon" target="_blank" className="w-full opacity-0 animate-fade-in-up-1">
                 <Button
                   variant="secondary"
                   className="w-full h-14 text-lg justify-between bg-white/5 hover:bg-white/10 text-white border border-white/10 transition-all hover:scale-105 hover:border-purple-500/50 px-6"
@@ -46,7 +46,7 @@ export default function Page() {
                 </Button>
               </Link>
 
-              <Link href="https://www.instagram.com/Miizumelon" target="_blank" className="w-full">
+              <Link href="https://www.instagram.com/Miizumelon" target="_blank" className="w-full opacity-0 animate-fade-in-up-2">
                 <Button
                   variant="secondary"
                   className="w-full h-14 text-lg justify-between bg-white/5 hover:bg-white/10 text-white border border-white/10 transition-all hover:scale-105 hover:border-purple-500/50 px-6"
@@ -56,7 +56,7 @@ export default function Page() {
                 </Button>
               </Link>
 
-              <Link href="https://x.com/@heyMiizu" target="_blank" className="w-full">
+              <Link href="https://x.com/@heyMiizu" target="_blank" className="w-full opacity-0 animate-fade-in-up-3">
                 <Button
                   variant="secondary"
                   className="w-full h-14 text-lg justify-between bg-white/5 hover:bg-white/10 text-white border border-white/10 transition-all hover:scale-105 hover:border-purple-500/50 px-6"
@@ -66,7 +66,7 @@ export default function Page() {
                 </Button>
               </Link>
 
-              <Link href="https://miizu.de" target="_blank" className="w-full">
+              <Link href="https://miizu.de" target="_blank" className="w-full opacity-0 animate-fade-in-up-4">
                 <Button
                   variant="secondary"
                   className="w-full h-14 text-lg justify-between bg-white/5 hover:bg-white/10 text-white border border-white/10 transition-all hover:scale-105 hover:border-purple-500/50 px-6"

@@ -17,7 +17,24 @@ export default {
   			'shape-2': 'shape-2 20s ease-in-out infinite',
   			'shape-3': 'shape-3 18s ease-in-out infinite',
   			'shape-4': 'shape-4 22s ease-in-out infinite',
-  			'shape-5': 'shape-5 30s ease-in-out infinite'
+  			'shape-5': 'shape-5 30s ease-in-out infinite',
+  			'fade-in-up': 'fadeInUp 0.8s ease-out 0.2s forwards',
+  			'fade-in-up-1': 'fadeInUp 0.8s ease-out 0.6s forwards',
+  			'fade-in-up-2': 'fadeInUp 0.8s ease-out 0.9s forwards',
+  			'fade-in-up-3': 'fadeInUp 0.8s ease-out 1.2s forwards',
+  			'fade-in-up-4': 'fadeInUp 0.8s ease-out 1.5s forwards',
+  		},
+  		keyframes: {
+  			fadeInUp: {
+  				'0%': {
+  					opacity: '0',
+  					transform: 'translateY(20px)',
+  				},
+  				'100%': {
+  					opacity: '1',
+  					transform: 'translateY(0)',
+  				},
+  			},
   		},
   		colors: {
   			border: 'hsl(var(--border))',
