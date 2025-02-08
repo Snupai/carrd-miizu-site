@@ -1,37 +1,85 @@
-import Link from "next/link";
+"use client"
 
-export default function HomePage() {
+import Image from "next/image"
+import Link from "next/link"
+import { IconBrandX, IconBrandInstagram, IconBrandYoutubeFilled, IconWorld } from "@tabler/icons-react"
+import { Button } from "~/components/ui/button"
+import { AnimatedBackground } from "~/components/animated-background"
+
+export default function Page() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c] text-white">
-      <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16">
-        <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
-          Create <span className="text-[hsl(280,100%,70%)]">T3</span> App
-        </h1>
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8">
-          <Link
-            className="flex max-w-xs flex-col gap-4 rounded-xl bg-white/10 p-4 text-white hover:bg-white/20"
-            href="https://create.t3.gg/en/usage/first-steps"
-            target="_blank"
-          >
-            <h3 className="text-2xl font-bold">First Steps →</h3>
-            <div className="text-lg">
-              Just the basics - Everything you need to know to set up your
-              database and authentication.
+    <main className="min-h-screen w-full flex items-center justify-center p-4 relative overflow-hidden">
+      <AnimatedBackground />
+
+      {/* Main Content Box */}
+      <div className="relative w-full max-w-[95vw] md:max-w-5xl lg:max-w-6xl">
+        {/* Localized blur effect */}
+        <div className="absolute inset-0 backdrop-blur-2xl rounded-2xl" />
+
+        {/* Content */}
+        <div className="relative w-full bg-black/40 rounded-2xl shadow-2xl p-6 sm:p-8 md:p-12 lg:p-16 border border-white/10">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-12 items-center">
+            {/* Left Side - Profile */}
+            <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-4 md:space-y-6">
+              <div className="relative w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 ring-4 ring-purple-500/20 rounded-full shadow-2xl">
+                <Image
+                  src="/miizu-pfp.png"
+                  alt="Profile Picture"
+                  fill
+                  className="rounded-full object-cover"
+                  priority
+                />
+              </div>
+              <h1 className="text-2xl sm:text-3xl font-bold text-white">Miizu</h1>
+              <p className="text-base sm:text-lg text-white/80">Digital Creator & Content Producer</p>
             </div>
-          </Link>
-          <Link
-            className="flex max-w-xs flex-col gap-4 rounded-xl bg-white/10 p-4 text-white hover:bg-white/20"
-            href="https://create.t3.gg/en/introduction"
-            target="_blank"
-          >
-            <h3 className="text-2xl font-bold">Documentation →</h3>
-            <div className="text-lg">
-              Learn more about Create T3 App, the libraries it uses, and how to
-              deploy it.
+
+            {/* Right Side - Social Links */}
+            <div className="flex flex-col gap-2 sm:gap-3 md:gap-4">
+              <Link href="https://www.youtube.com/@Miizumelon" target="_blank" className="w-full">
+                <Button
+                  variant="secondary"
+                  className="w-full h-14 text-lg justify-between bg-white/5 hover:bg-white/10 text-white border border-white/10 transition-all hover:scale-105 hover:border-purple-500/50 px-6"
+                >
+                  <span>YouTube</span>
+                  <IconBrandYoutubeFilled className="w-8 h-8" />
+                </Button>
+              </Link>
+
+              <Link href="https://www.instagram.com/Miizumelon" target="_blank" className="w-full">
+                <Button
+                  variant="secondary"
+                  className="w-full h-14 text-lg justify-between bg-white/5 hover:bg-white/10 text-white border border-white/10 transition-all hover:scale-105 hover:border-purple-500/50 px-6"
+                >
+                  <span>Instagram</span>
+                  <IconBrandInstagram className="w-8 h-8" />
+                </Button>
+              </Link>
+
+              <Link href="https://x.com/@heyMiizu" target="_blank" className="w-full">
+                <Button
+                  variant="secondary"
+                  className="w-full h-14 text-lg justify-between bg-white/5 hover:bg-white/10 text-white border border-white/10 transition-all hover:scale-105 hover:border-purple-500/50 px-6"
+                >
+                  <span>X</span>
+                  <IconBrandX className="w-8 h-8" />
+                </Button>
+              </Link>
+
+              <Link href="https://miizu.de" target="_blank" className="w-full">
+                <Button
+                  variant="secondary"
+                  className="w-full h-14 text-lg justify-between bg-white/5 hover:bg-white/10 text-white border border-white/10 transition-all hover:scale-105 hover:border-purple-500/50 px-6"
+                >
+                  <span>Website</span>
+                  <IconWorld className="w-8 h-8" />
+                </Button>
+              </Link>
             </div>
-          </Link>
+          </div>
         </div>
       </div>
     </main>
-  );
+  )
 }
+
