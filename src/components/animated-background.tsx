@@ -1,9 +1,11 @@
 "use client"
 
+import styles from "./animated-background.module.css"
+
 export function AnimatedBackground() {
   return (
-    <div className="gradient-bg">
-      <svg xmlns="http://www.w3.org/2000/svg">
+    <div className={styles.gradient}>
+      <svg className={styles.svg} xmlns="http://www.w3.org/2000/svg">
         <defs>
           <filter id="goo">
             <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
@@ -17,13 +19,13 @@ export function AnimatedBackground() {
           </filter>
         </defs>
       </svg>
-      <div className="gradients-container">
-        <div className="g1"></div>
-        <div className="g2"></div>
-        <div className="g3"></div>
-        <div className="g4"></div>
-        <div className="g5"></div>
-        <div className="interactive"></div>
+      <div className={styles.gradientsContainer}>
+        <div className={styles.gradient1}></div>
+        <div className={styles.gradient2}></div>
+        <div className={styles.gradient3}></div>
+        <div className={styles.gradient4}></div>
+        <div className={styles.gradient5}></div>
+        <div className={styles.interactive}></div>
       </div>
     </div>
   )
