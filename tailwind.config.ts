@@ -13,26 +13,133 @@ export default {
                 ]
   		},
   		animation: {
-  			'shape-1': 'shape-1 25s ease-in-out infinite',
-  			'shape-2': 'shape-2 20s ease-in-out infinite',
-  			'shape-3': 'shape-3 18s ease-in-out infinite',
-  			'shape-4': 'shape-4 22s ease-in-out infinite',
-  			'shape-5': 'shape-5 30s ease-in-out infinite',
-  			'fade-in-up': 'fadeInUp 0.8s ease-out 0.2s forwards',
-  			'fade-in-up-1': 'fadeInUp 0.8s ease-out 0.6s forwards',
-  			'fade-in-up-2': 'fadeInUp 0.8s ease-out 0.9s forwards',
-  			'fade-in-up-3': 'fadeInUp 0.8s ease-out 1.2s forwards',
-  			'fade-in-up-4': 'fadeInUp 0.8s ease-out 1.5s forwards',
+  			'fade-in': 'fadeIn 0.6s ease-out forwards',
+  			'box-animations': 'initialBounce 1s cubic-bezier(0.4, 0, 0.2, 1) forwards, expandBox 2s cubic-bezier(0.76, 0, 0.24, 1) 1.2s forwards',
+  			'letter-appear': 'letterAppear 0.4s ease-out forwards',
+  			'button-reveal-1': 'buttonReveal1 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) 2.4s forwards',
+  			'button-reveal-2': 'buttonReveal2 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) 2.9s forwards',
+  			'button-reveal-3': 'buttonReveal3 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) 3.4s forwards',
+  			'button-reveal-4': 'buttonReveal4 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) 3.9s forwards',
+  			'heart-pulse': 'heartPulse 1.5s ease-in-out infinite',
   		},
   		keyframes: {
-  			fadeInUp: {
-  				'0%': {
+  			fadeIn: {
+  				'0%': { opacity: '0', transform: 'scale(0.9)' },
+  				'100%': { opacity: '1', transform: 'scale(1)' },
+  			},
+  			initialBounce: {
+  				'0%': { 
   					opacity: '0',
-  					transform: 'translateY(20px)',
+  					transform: 'translateY(15px)',
   				},
-  				'100%': {
+  				'60%': {
+  					opacity: '1',
+  					transform: 'translateY(-2px)',
+  				},
+  				'100%': { 
   					opacity: '1',
   					transform: 'translateY(0)',
+  				},
+  			},
+  			expandBox: {
+  				'0%': { 
+  					maxWidth: '400px',
+  				},
+  				'70%': {
+  					maxWidth: '970px',
+  				},
+  				'90%': {
+  					maxWidth: '940px',
+  				},
+  				'100%': { 
+  					maxWidth: '952px',
+  				},
+  			},
+  			letterAppear: {
+  				'0%': { 
+  					opacity: '0',
+  					transform: 'translateY(15px)',
+  				},
+  				'50%': {
+  					transform: 'translateY(-3px)',
+  				},
+  				'100%': { 
+  					opacity: '1',
+  					transform: 'translateY(0)',
+  				},
+  			},
+  			buttonReveal1: {
+  				'0%': { 
+  					opacity: '0',
+  					transform: 'translate(-8px, -20%) rotate(-0.5deg)',
+  				},
+  				'50%': {
+  					transform: 'translate(4px, 5%) rotate(0.3deg)',
+  				},
+  				'100%': { 
+  					opacity: '1',
+  					transform: 'translate(0, 0) rotate(0deg)',
+  				},
+  			},
+  			buttonReveal2: {
+  				'0%': { 
+  					opacity: '0',
+  					transform: 'translate(8px, -20%) rotate(0.5deg)',
+  				},
+  				'50%': {
+  					transform: 'translate(-4px, 5%) rotate(-0.3deg)',
+  				},
+  				'100%': { 
+  					opacity: '1',
+  					transform: 'translate(0, 0) rotate(0deg)',
+  				},
+  			},
+  			buttonReveal3: {
+  				'0%': { 
+  					opacity: '0',
+  					transform: 'translate(-8px, -20%) rotate(-0.5deg)',
+  				},
+  				'50%': {
+  					transform: 'translate(4px, 5%) rotate(0.3deg)',
+  				},
+  				'100%': { 
+  					opacity: '1',
+  					transform: 'translate(0, 0) rotate(0deg)',
+  				},
+  			},
+  			buttonReveal4: {
+  				'0%': { 
+  					opacity: '0',
+  					transform: 'translate(8px, -20%) rotate(0.5deg)',
+  				},
+  				'50%': {
+  					transform: 'translate(-4px, 5%) rotate(-0.3deg)',
+  				},
+  				'100%': { 
+  					opacity: '1',
+  					transform: 'translate(0, 0) rotate(0deg)',
+  				},
+  			},
+  			showReal: {
+  				'0%': { 
+  					opacity: '0',
+  				},
+  				'100%': { 
+  					opacity: '1',
+  				},
+  			},
+  			heartPulse: {
+  				'0%': { 
+  					opacity: '0.4',
+  					transform: 'scale(0.9)',
+  				},
+  				'50%': {
+  					opacity: '0.7',
+  					transform: 'scale(1.1)',
+  				},
+  				'100%': { 
+  					opacity: '0.4',
+  					transform: 'scale(0.9)',
   				},
   			},
   		},
