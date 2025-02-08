@@ -1,0 +1,5 @@
+---
+description: add package
+globs: *.tsx
+---
+i am using bun 
