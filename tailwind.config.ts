@@ -14,7 +14,7 @@ export default {
   		},
   		animation: {
   			'fade-in': 'fadeIn 0.6s ease-out forwards',
-  			'box-animations': 'initialBounce 1s cubic-bezier(0.4, 0, 0.2, 1) forwards, expandBox 2s cubic-bezier(0.4, 0, 0.2, 1) 1s forwards',
+  			'box-animations': 'boxFadeIn 1s cubic-bezier(0.4, 0, 0.2, 1) forwards, expandBox 2s cubic-bezier(0.4, 0, 0.2, 1) 1s forwards',
   			'letter-appear': 'letterAppear 0.4s ease-out forwards',
   			'button-reveal-1': 'buttonReveal1 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) 1.9s forwards',
   			'button-reveal-2': 'buttonReveal2 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) 2.4s forwards',
@@ -26,6 +26,18 @@ export default {
   			fadeIn: {
   				'0%': { opacity: '0', transform: 'scale(0.9)' },
   				'100%': { opacity: '1', transform: 'scale(1)' },
+  			},
+  			boxFadeIn: {
+  				'0%': { 
+  					opacity: '0',
+  					height: '482px',
+  					transform: 'translateY(20px)',
+  				},
+  				'100%': { 
+  					opacity: '1',
+  					height: '482px',
+  					transform: 'translateY(0)',
+  				},
   			},
   			initialBounce: {
   				'0%': { 
@@ -46,7 +58,7 @@ export default {
   			},
   			expandBox: {
   				'0%': { 
-  					maxWidth: '400px',
+  					maxWidth: '360px',
   					height: '482px',
   				},
   				'100%': { 

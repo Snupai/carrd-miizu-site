@@ -9,7 +9,7 @@ import { AnimatedBackground } from "~/components/animated-background"
 
 export default function Page() {
   const [mounted, setMounted] = useState(false)
-  const name = "Miizu"
+  const name = "Miizumelon"
   const description = "made with love"
 
   useEffect(() => {
@@ -38,7 +38,7 @@ export default function Page() {
       <AnimatedBackground />
 
       {/* Main Content Box */}
-      <div className="relative w-full max-w-[400px] md:max-w-[400px] animate-box-animations h-[482px]">
+      <div className="relative w-full max-w-[360px] md:max-w-[360px] animate-box-animations h-[482px]">
         {/* Localized blur effect */}
         <div className="absolute inset-0 backdrop-blur-2xl rounded-[64px]" />
 
@@ -59,7 +59,7 @@ export default function Page() {
                 </div>
                 {mounted && (
                   <div className="flex flex-col gap-2">
-                    <h1 className="text-2xl sm:text-3xl font-bold text-white">
+                    <h1 className="text-3xl sm:text-4xl font-bold text-white">
                       <AnimatedText text={name} delay={0} />
                     </h1>
                     <p className="text-base sm:text-lg text-white/80">
