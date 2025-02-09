@@ -10,7 +10,7 @@ import { AnimatedBackground } from "~/components/animated-background"
 export default function Page() {
   const [mounted, setMounted] = useState(false)
   const name = "Miizu"
-  const description = "made with love ❤️"
+  const description = "made with love"
 
   useEffect(() => {
     setMounted(true)
@@ -38,38 +38,42 @@ export default function Page() {
       <AnimatedBackground />
 
       {/* Main Content Box */}
-      <div className="relative w-full max-w-[400px] md:max-w-[400px] animate-box-animations">
+      <div className="relative w-full max-w-[400px] md:max-w-[400px] animate-box-animations h-[482px]">
         {/* Localized blur effect */}
         <div className="absolute inset-0 backdrop-blur-2xl rounded-[64px]" />
 
         {/* Content */}
-        <div className="relative w-full bg-black/40 rounded-[64px] shadow-2xl p-6 sm:p-8 md:p-12 lg:p-16 border border-white/10">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 items-center">
+        <div className="relative w-full h-full bg-black/40 rounded-[64px] shadow-2xl p-6 sm:p-8 md:p-12 lg:p-16 border border-white/10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 h-full">
             {/* Left Side - Profile */}
-            <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-4 md:space-y-6">
-              <div className="relative w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 ring-4 ring-purple-500/20 rounded-full shadow-2xl animate-fade-in">
-                <Image
-                  src="/miizu-pfp.png"
-                  alt="Profile Picture"
-                  fill
-                  className="rounded-full object-cover"
-                  priority
-                />
+            <div className="flex flex-col items-center md:items-start text-center md:text-left h-full justify-center">
+              <div className="flex flex-col items-center md:items-start gap-4 md:gap-6">
+                <div className="relative w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 ring-4 ring-purple-500/20 rounded-full shadow-2xl animate-fade-in">
+                  <Image
+                    src="/miizu-pfp.png"
+                    alt="Profile Picture"
+                    fill
+                    className="rounded-full object-cover"
+                    priority
+                  />
+                </div>
+                {mounted && (
+                  <div className="flex flex-col gap-2">
+                    <h1 className="text-2xl sm:text-3xl font-bold text-white">
+                      <AnimatedText text={name} delay={0} />
+                    </h1>
+                    <p className="text-base sm:text-lg text-white/80">
+                      <AnimatedText text={description} delay={1} />
+                      {' '}
+                      <span className="inline-block opacity-0 animate-[heartReveal_0.3s_ease-out_3s_forwards,heartPulse_2s_linear_4s_infinite] text-red-500/80">❤</span>
+                    </p>
+                  </div>
+                )}
               </div>
-              {mounted && (
-                <>
-                  <h1 className="text-2xl sm:text-3xl font-bold text-white">
-                    <AnimatedText text={name} delay={0} />
-                  </h1>
-                  <p className="text-base sm:text-lg text-white/80">
-                    <AnimatedText text={description} delay={1} />
-                  </p>
-                </>
-              )}
             </div>
 
             {/* Right Side - Social Links */}
-            <div className="flex flex-col gap-4 sm:gap-6 md:gap-8">
+            <div className="flex flex-col gap-4 sm:gap-6 md:gap-8 h-full justify-center">
               {/* YouTube Button */}
               <Link 
                 href="https://www.youtube.com/@Miizumelon" 

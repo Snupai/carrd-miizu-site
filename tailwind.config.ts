@@ -14,13 +14,13 @@ export default {
   		},
   		animation: {
   			'fade-in': 'fadeIn 0.6s ease-out forwards',
-  			'box-animations': 'initialBounce 1s cubic-bezier(0.4, 0, 0.2, 1) forwards, expandBox 2s ease-out 1s forwards',
+  			'box-animations': 'initialBounce 1s cubic-bezier(0.4, 0, 0.2, 1) forwards, expandBox 1.5s ease-out 0.7s forwards',
   			'letter-appear': 'letterAppear 0.4s ease-out forwards',
-  			'button-reveal-1': 'buttonReveal1 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) 2.4s forwards',
-  			'button-reveal-2': 'buttonReveal2 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) 2.9s forwards',
-  			'button-reveal-3': 'buttonReveal3 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) 3.4s forwards',
-  			'button-reveal-4': 'buttonReveal4 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) 3.9s forwards',
-  			'heart-pulse': 'heartPulse 1.5s ease-in-out infinite',
+  			'button-reveal-1': 'buttonReveal1 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) 1.9s forwards',
+  			'button-reveal-2': 'buttonReveal2 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) 2.4s forwards',
+  			'button-reveal-3': 'buttonReveal3 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) 2.9s forwards',
+  			'button-reveal-4': 'buttonReveal4 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) 3.4s forwards',
+  			'heart-pulse': 'heartPulse 2.5s linear infinite',
   		},
   		keyframes: {
   			fadeIn: {
@@ -31,22 +31,27 @@ export default {
   				'0%': { 
   					opacity: '0',
   					transform: 'translateY(15px)',
+  					height: '482px',
   				},
   				'60%': {
   					opacity: '1',
   					transform: 'translateY(-2px)',
+  					height: '482px',
   				},
   				'100%': { 
   					opacity: '1',
   					transform: 'translateY(0)',
+  					height: '482px',
   				},
   			},
   			expandBox: {
   				'0%': { 
   					maxWidth: '400px',
+  					height: '482px',
   				},
   				'100%': { 
   					maxWidth: '952px',
+  					height: '482px',
   				},
   			},
   			letterAppear: {
@@ -110,18 +115,25 @@ export default {
   					opacity: '1',
   				},
   			},
-  			heartPulse: {
+  			heartReveal: {
   				'0%': { 
-  					opacity: '0.4',
-  					transform: 'scale(0.9)',
-  				},
-  				'50%': {
-  					opacity: '0.7',
-  					transform: 'scale(1.1)',
+  					opacity: '0',
+  					transform: 'scale(0.5)',
   				},
   				'100%': { 
-  					opacity: '0.4',
-  					transform: 'scale(0.9)',
+  					opacity: '1',
+  					transform: 'scale(1)',
+  				},
+  			},
+  			heartPulse: {
+  				'0%': { 
+  					opacity: '0.8',
+  				},
+  				'50%': {
+  					opacity: '1',
+  				},
+  				'100%': { 
+  					opacity: '0.8',
   				},
   			},
   		},
