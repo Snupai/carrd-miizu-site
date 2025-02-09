@@ -65,53 +65,41 @@ export default {
   			buttonReveal1: {
   				'0%': { 
   					opacity: '0',
-  					transform: 'translate(-8px, -20%) rotate(-0.5deg)',
-  				},
-  				'50%': {
-  					transform: 'translate(4px, 5%) rotate(0.3deg)',
+  					transform: 'translateY(-12px)',
   				},
   				'100%': { 
   					opacity: '1',
-  					transform: 'translate(0, 0) rotate(0deg)',
+  					transform: 'translateY(0)',
   				},
   			},
   			buttonReveal2: {
   				'0%': { 
   					opacity: '0',
-  					transform: 'translate(8px, -20%) rotate(0.5deg)',
-  				},
-  				'50%': {
-  					transform: 'translate(-4px, 5%) rotate(-0.3deg)',
+  					transform: 'translateY(-12px)',
   				},
   				'100%': { 
   					opacity: '1',
-  					transform: 'translate(0, 0) rotate(0deg)',
+  					transform: 'translateY(0)',
   				},
   			},
   			buttonReveal3: {
   				'0%': { 
   					opacity: '0',
-  					transform: 'translate(-8px, -20%) rotate(-0.5deg)',
-  				},
-  				'50%': {
-  					transform: 'translate(4px, 5%) rotate(0.3deg)',
+  					transform: 'translateY(-12px)',
   				},
   				'100%': { 
   					opacity: '1',
-  					transform: 'translate(0, 0) rotate(0deg)',
+  					transform: 'translateY(0)',
   				},
   			},
   			buttonReveal4: {
   				'0%': { 
   					opacity: '0',
-  					transform: 'translate(8px, -20%) rotate(0.5deg)',
-  				},
-  				'50%': {
-  					transform: 'translate(-4px, 5%) rotate(-0.3deg)',
+  					transform: 'translateY(-12px)',
   				},
   				'100%': { 
   					opacity: '1',
-  					transform: 'translate(0, 0) rotate(0deg)',
+  					transform: 'translateY(0)',
   				},
   			},
   			showReal: {
