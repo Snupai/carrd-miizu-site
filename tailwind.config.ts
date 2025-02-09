@@ -30,12 +30,12 @@ export default {
   			boxFadeIn: {
   				'0%': { 
   					opacity: '0',
-  					height: '482px',
+  					height: 'var(--initial-height)',
   					transform: 'translateY(20px)',
   				},
   				'100%': { 
   					opacity: '1',
-  					height: '482px',
+  					height: 'var(--initial-height)',
   					transform: 'translateY(0)',
   				},
   			},
@@ -43,27 +43,27 @@ export default {
   				'0%': { 
   					opacity: '0',
   					transform: 'translateY(15px)',
-  					height: '482px',
+  					height: '460px',
   				},
   				'60%': {
   					opacity: '1',
   					transform: 'translateY(-2px)',
-  					height: '482px',
+  					height: '460px',
   				},
   				'100%': { 
   					opacity: '1',
   					transform: 'translateY(0)',
-  					height: '482px',
+  					height: '460px',
   				},
   			},
   			expandBox: {
   				'0%': { 
-  					maxWidth: '360px',
-  					height: '482px',
+  					maxWidth: 'var(--initial-width)',
+  					height: 'var(--initial-height)',
   				},
   				'100%': { 
-  					maxWidth: '952px',
-  					height: '482px',
+  					maxWidth: 'var(--expanded-width)',
+  					height: 'var(--expanded-height)',
   				},
   			},
   			letterAppear: {
@@ -195,6 +195,9 @@ export default {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
+  		},
+  		screens: {
+  			'xs': '400px',
   		}
   	}
   },

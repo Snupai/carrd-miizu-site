@@ -38,7 +38,27 @@ export default function Page() {
       <AnimatedBackground />
 
       {/* Main Content Box */}
-      <div className="relative w-full max-w-[360px] md:max-w-[360px] animate-box-animations h-[482px]">
+      <div 
+        className="relative w-full max-w-[300px] xs:max-w-[320px] sm:max-w-[340px] md:max-w-[340px] lg:max-w-[360px] animate-box-animations h-[420px] md:h-[482px]"
+        style={{ 
+          '--initial-width': '300px', 
+          '--initial-height': '420px',
+          '--expanded-width': 'var(--initial-width)',
+          '--expanded-height': '420px',
+        } as React.CSSProperties}
+        ref={(el) => {
+          if (el) {
+            const width = window.getComputedStyle(el).maxWidth;
+            const height = window.getComputedStyle(el).height;
+            const isMobile = window.innerWidth <= 767;
+            
+            el.style.setProperty('--initial-width', width);
+            el.style.setProperty('--initial-height', height);
+            el.style.setProperty('--expanded-width', isMobile ? width : '952px');
+            el.style.setProperty('--expanded-height', isMobile ? '700px' : (isMobile ? height : '482px'));
+          }
+        }}
+      >
         {/* Localized blur effect */}
         <div className="absolute inset-0 backdrop-blur-2xl rounded-[64px]" />
 
