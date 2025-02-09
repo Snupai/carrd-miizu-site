@@ -7,6 +7,16 @@
   color-scheme: dark;
 }
 
+html {
+  min-height: 100%;
+  background-color: var(--color-bg1); /* Use the same variable as animated background */
+}
+
+body {
+  min-height: 100%;
+  background: transparent; /* Allow animated background to show through */
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
