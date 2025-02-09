@@ -59,10 +59,10 @@ export default function Page() {
               {mounted && (
                 <>
                   <h1 className="text-2xl sm:text-3xl font-bold text-white">
-                    <AnimatedText text={name} delay={0.8} />
+                    <AnimatedText text={name} delay={0} />
                   </h1>
                   <p className="text-base sm:text-lg text-white/80">
-                    <AnimatedText text={description} delay={1.8} />
+                    <AnimatedText text={description} delay={1} />
                   </p>
                 </>
               )}
