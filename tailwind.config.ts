@@ -14,7 +14,7 @@ export default {
   		},
   		animation: {
   			'fade-in': 'fadeIn 0.6s ease-out forwards',
-  			'box-animations': 'initialBounce 1s cubic-bezier(0.4, 0, 0.2, 1) forwards, expandBox 1.5s ease-out 0.7s forwards',
+  			'box-animations': 'initialBounce 1s cubic-bezier(0.4, 0, 0.2, 1) forwards, expandBox 2s cubic-bezier(0.4, 0, 0.2, 1) 1s forwards',
   			'letter-appear': 'letterAppear 0.4s ease-out forwards',
   			'button-reveal-1': 'buttonReveal1 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) 1.9s forwards',
   			'button-reveal-2': 'buttonReveal2 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) 2.4s forwards',
